@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\lab_work_uni_csharp\\lab_work_uni_csharp\\lab_work_uni_csharp.csproj",
+      "projectUniqueName": "D:\\c#\\lab-work-uni\\lab_work_uni_csharp\\lab_work_uni_csharp.csproj",
       "projectName": "lab_work_uni_csharp",
-      "projectPath": "D:\\c#\\lab_work_uni_csharp\\lab_work_uni_csharp\\lab_work_uni_csharp.csproj",
+      "projectPath": "D:\\c#\\lab-work-uni\\lab_work_uni_csharp\\lab_work_uni_csharp.csproj",
       "packagesPath": "C:\\Users\\Никита\\.nuget\\packages\\",
-      "outputPath": "D:\\c#\\lab_work_uni_csharp\\lab_work_uni_csharp\\obj\\",
+      "outputPath": "D:\\c#\\lab-work-uni\\lab_work_uni_csharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Никита\\AppData\\Roaming\\NuGet\\NuGet.Config"

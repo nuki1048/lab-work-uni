@@ -6,81 +6,79 @@ using System.Threading.Tasks;
 
 namespace lab_work_uni_csharp
 {
-    public enum ProcessStatus { Ready, Running, Waiting, Terminated }
-
-    public delegate void ProcessDelegate(Process proc);
-
-    public class Process
+    public enum ProcessStatus
     {
-        public Process(long pId, long addrSpace)
+        Ready,
+        Running,
+        Waiting,
+        Terminated
+    }
+
+    public class Process: IComparable<Process>
+    {
+        public Process(long pid, long addrSpace)
         {
-            _id = pId;
-            _name = "P" + pId.ToString();
+            _id = pid;
+            AddrSpace = addrSpace;           
+            _name = "P" + pid.ToString();
+
             Status = ProcessStatus.Ready;
-            this.AddrSpace = addrSpace;
         }
+
         public void IncreaseWorkTime()
         {
-            if (_workTime == BurstTime) 
+            if (_workTime==BurstTime)
             {
                 if (Status == ProcessStatus.Running)
                 {
-                    Status = _procRand.Next(0, 2) == 0 ? ProcessStatus.Terminated : ProcessStatus.Waiting; 
+                    Status = _random.Next(0, 2) == 0 ? ProcessStatus.Terminated : ProcessStatus.Waiting;
+                  
                 }
-                else 
+                else
                 {
                     Status = ProcessStatus.Ready;
-                    OnFreeingAResource();
                 }
+                OnFreeingAResource();
             }
             else
             {
                 _workTime++;
             }
+            
         }
-
-
-
         public void ResetWorkTime()
         {
             _workTime = 0;
         }
+
         public override string ToString()
         {
-            return "Process Id = " + _id.ToString() + "; BurstTime = " + BurstTime.ToString() + "; WorkTime = " + _workTime.ToString();
+            string result = "Id: " + _id.ToString() + " Name: " + _name + " Status: " + Status + " BurstTime: " + BurstTime + " AddrSpace: " + AddrSpace;
+            return result;
+        }
+
+        public int CompareTo(Process? other)
+        {
+            return other == null ? 1 : other.BurstTime.CompareTo(this.BurstTime);
+        }
+
+        private void OnFreeingAResource()
+        {
+            FreeingAResource(this, null!);
         }
 
         private long _id;
         private string _name;
         private long _workTime;
-        private long _addrSpace;
 
-        private Random _procRand = new Random();
-
-        public long BurstTime
-        {
-            get; 
-            set; 
-        }
-        public long AddrSpace
-        {
-            get;
-            set; 
-        }
-        public ProcessStatus Status
-        {
-            get; 
-            set; 
-        }
-
-        public event ProcessDelegate FreeingAResource;
-
-       
-
-        private void OnFreeingAResource()
-        {
-            FreeingAResource?.Invoke(this);
-        }
-
+        public long BurstTime { get; set; }
+        public ProcessStatus Status { get; set; }    
+        public long ReadyQueueArrivalTime { get; set; }
+        public long AddrSpace { get; private set; }
+        public long ArrivalTime { get; set; }
+        public long CommonWaitingTime { get; set; }
+        
+        public event EventHandler FreeingAResource ;
+        private Random _random = new Random();
     }
 }

@@ -1,6 +1,9 @@
-﻿namespace lab_work_uni_csharp
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace lab_work_uni_csharp
 {
-    public class SystemClock
+    public class SystemClock: INotifyPropertyChanged
     {
 
         public SystemClock(long clock)
@@ -9,17 +12,19 @@
         }
 
     
-        private long Clock
-        {
-            get;
-            set;
+        public long Clock { 
+            get => _clock;
+            private set
+            {
+                _clock = value;
+                OnPropertyChanged();
+            }
         }
 
         private long _clock;
 
         public SystemClock()
         {
-            throw new NotImplementedException();
         }
 
 
@@ -31,6 +36,12 @@
         public void Clear()
         {
             Clock = 0;
+        }
+        public event PropertyChangedEventHandler? PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

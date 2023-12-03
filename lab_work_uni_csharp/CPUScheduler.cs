@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using lab_work_uni_csharp;
-
-
-namespace lab_work_uni
+﻿namespace lab_work_uni_csharp
 {
-    public class CPUScheduler
+    public class CpuScheduler
     {
      
 
         private Resource _resource;
-        private PriorityQueue<Process, long> _queue;
+        private Queue<Process> _queue;
         
-        public CPUScheduler(Resource resource, PriorityQueue<Process, long> queue)
+        public CpuScheduler(Resource resource, Queue<Process> queue)
         {
             this._resource = resource;
             this._queue = queue;
         }
-        public PriorityQueue<Process, long> Session()
+        public Queue<Process> Session()
         {
             _resource.ActiveProcess = _queue.Dequeue();
             _resource.ActiveProcess.Status = ProcessStatus.Running;

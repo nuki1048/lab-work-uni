@@ -3,12 +3,12 @@
     partial class FrmDetailed
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,467 +23,780 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
-            groupBox4 = new GroupBox();
-            groupBox5 = new GroupBox();
-            groupBox6 = new GroupBox();
-            groupBox7 = new GroupBox();
-            groupBox8 = new GroupBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            groupBox9 = new GroupBox();
-            groupBox10 = new GroupBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            groupBox11 = new GroupBox();
-            groupBox12 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            button1 = new Button();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown4 = new NumericUpDown();
-            numericUpDown5 = new NumericUpDown();
-            numericUpDown6 = new NumericUpDown();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox5.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox7.SuspendLayout();
-            groupBox8.SuspendLayout();
-            groupBox9.SuspendLayout();
-            groupBox10.SuspendLayout();
-            groupBox11.SuspendLayout();
-            groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.tBL1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tBL2_1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bClear = new System.Windows.Forms.Button();
+            this.bWorkingCycle = new System.Windows.Forms.Button();
+            this.bSaveSettings = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbAuto = new System.Windows.Forms.RadioButton();
+            this.rbManual = new System.Windows.Forms.RadioButton();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.tBL3 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCPUQueue = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblDeviceQueue = new System.Windows.Forms.ListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbCPU = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tbDevice = new System.Windows.Forms.TextBox();
+            this.tBL4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tBL4_3 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudMaxValueOfBurstTime = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tBL4_4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbRamSize = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tBL4_1 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudIntesity = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tBL4_2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudMinValueOfBurstTime = new System.Windows.Forms.NumericUpDown();
+            this.tBL4_5 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudMinValueOfAddrSpace = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tBL4_6 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudMaxValueOfAddrSpace = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblOccupateMemValue = new System.Windows.Forms.Label();
+            this.lblFreeMemSize = new System.Windows.Forms.Label();
+            this.timerAutoMode = new System.Windows.Forms.Timer(this.components);
+            this.tBL1.SuspendLayout();
+            this.tBL2_1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tBL3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tBL4.SuspendLayout();
+            this.tBL4_3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxValueOfBurstTime)).BeginInit();
+            this.tBL4_4.SuspendLayout();
+            this.tBL4_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntesity)).BeginInit();
+            this.tBL4_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinValueOfBurstTime)).BeginInit();
+            this.tBL4_5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinValueOfAddrSpace)).BeginInit();
+            this.tBL4_6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxValueOfAddrSpace)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tBL1
+            // 
+            this.tBL1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBL1.AutoSize = true;
+            this.tBL1.ColumnCount = 1;
+            this.tBL1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL1.Controls.Add(this.tBL2_1, 0, 3);
+            this.tBL1.Controls.Add(this.tBL3, 0, 1);
+            this.tBL1.Controls.Add(this.tBL4, 0, 0);
+            this.tBL1.Controls.Add(this.groupBox6, 0, 2);
+            this.tBL1.Location = new System.Drawing.Point(1, 0);
+            this.tBL1.Name = "tBL1";
+            this.tBL1.RowCount = 4;
+            this.tBL1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
+            this.tBL1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
+            this.tBL1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tBL1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tBL1.Size = new System.Drawing.Size(786, 560);
+            this.tBL1.TabIndex = 0;
+            // 
+            // tBL2_1
+            // 
+            this.tBL2_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBL2_1.AutoSize = true;
+            this.tBL2_1.ColumnCount = 5;
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.523719F));
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.61955F));
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28557F));
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28557F));
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28557F));
+            this.tBL2_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tBL2_1.Controls.Add(this.groupBox1, 1, 0);
+            this.tBL2_1.Controls.Add(this.lblTime, 0, 0);
+            this.tBL2_1.Controls.Add(this.bClear, 4, 0);
+            this.tBL2_1.Controls.Add(this.bWorkingCycle, 3, 0);
+            this.tBL2_1.Controls.Add(this.bSaveSettings, 2, 0);
+            this.tBL2_1.Location = new System.Drawing.Point(3, 506);
+            this.tBL2_1.Name = "tBL2_1";
+            this.tBL2_1.RowCount = 1;
+            this.tBL2_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tBL2_1.Size = new System.Drawing.Size(780, 51);
+            this.tBL2_1.TabIndex = 3;
+            // 
+            // bClear
+            // 
+            this.bClear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bClear.Enabled = false;
+            this.bClear.Location = new System.Drawing.Point(670, 3);
+            this.bClear.Name = "bClear";
+            this.bClear.Size = new System.Drawing.Size(107, 45);
+            this.bClear.TabIndex = 0;
+            this.bClear.Text = "Очистка";
+            this.bClear.UseVisualStyleBackColor = true;
+            this.bClear.Click += new System.EventHandler(this.bClear_Click);
+            // 
+            // bWorkingCycle
+            // 
+            this.bWorkingCycle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bWorkingCycle.Enabled = false;
+            this.bWorkingCycle.Location = new System.Drawing.Point(559, 3);
+            this.bWorkingCycle.Name = "bWorkingCycle";
+            this.bWorkingCycle.Size = new System.Drawing.Size(105, 45);
+            this.bWorkingCycle.TabIndex = 1;
+            this.bWorkingCycle.Text = "Рабочий такт";
+            this.bWorkingCycle.UseVisualStyleBackColor = true;
+            this.bWorkingCycle.Click += new System.EventHandler(this.bWorkingCycle_Click);
+            // 
+            // bSaveSettings
+            // 
+            this.bSaveSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSaveSettings.Location = new System.Drawing.Point(448, 3);
+            this.bSaveSettings.Name = "bSaveSettings";
+            this.bSaveSettings.Size = new System.Drawing.Size(105, 45);
+            this.bSaveSettings.TabIndex = 2;
+            this.bSaveSettings.Text = "Сохранение настроек";
+            this.bSaveSettings.UseVisualStyleBackColor = true;
+            this.bSaveSettings.Click += new System.EventHandler(this.bSaveSettings_Click);
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(numericUpDown1);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(152, 101);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Интенсивность поступления процессов";
+            this.groupBox1.Controls.Add(this.rbAuto);
+            this.groupBox1.Controls.Add(this.rbManual);
+            this.groupBox1.Location = new System.Drawing.Point(77, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(254, 44);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Режим работы";
+            // 
+            // rbAuto
+            // 
+            this.rbAuto.AutoSize = true;
+            this.rbAuto.Location = new System.Drawing.Point(74, 14);
+            this.rbAuto.Name = "rbAuto";
+            this.rbAuto.Size = new System.Drawing.Size(109, 17);
+            this.rbAuto.TabIndex = 1;
+            this.rbAuto.Text = "Автоматический";
+            this.rbAuto.UseVisualStyleBackColor = true;
+            // 
+            // rbManual
+            // 
+            this.rbManual.AutoSize = true;
+            this.rbManual.Checked = true;
+            this.rbManual.Location = new System.Drawing.Point(8, 14);
+            this.rbManual.Name = "rbManual";
+            this.rbManual.Size = new System.Drawing.Size(60, 17);
+            this.rbManual.TabIndex = 0;
+            this.rbManual.TabStop = true;
+            this.rbManual.Text = "Ручной";
+            this.rbManual.UseVisualStyleBackColor = true;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(3, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(68, 51);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "0";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tBL3
+            // 
+            this.tBL3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBL3.AutoSize = true;
+            this.tBL3.ColumnCount = 2;
+            this.tBL3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL3.Controls.Add(this.groupBox2, 0, 1);
+            this.tBL3.Controls.Add(this.groupBox3, 1, 1);
+            this.tBL3.Controls.Add(this.groupBox4, 0, 0);
+            this.tBL3.Controls.Add(this.groupBox5, 1, 0);
+            this.tBL3.Location = new System.Drawing.Point(3, 103);
+            this.tBL3.Name = "tBL3";
+            this.tBL3.RowCount = 2;
+            this.tBL3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tBL3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tBL3.Size = new System.Drawing.Size(780, 341);
+            this.tBL3.TabIndex = 1;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(numericUpDown2);
-            groupBox2.Location = new Point(192, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(152, 101);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Минимальное значение промежутка работы на ЦП";
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.Controls.Add(this.lblCPUQueue);
+            this.groupBox2.Location = new System.Drawing.Point(3, 54);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(384, 284);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Очередь к центральному процессору";
+            // 
+            // lblCPUQueue
+            // 
+            this.lblCPUQueue.FormattingEnabled = true;
+            this.lblCPUQueue.Location = new System.Drawing.Point(5, 15);
+            this.lblCPUQueue.Name = "lblCPUQueue";
+            this.lblCPUQueue.Size = new System.Drawing.Size(377, 264);
+            this.lblCPUQueue.TabIndex = 0;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(numericUpDown3);
-            groupBox3.Location = new Point(385, 12);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(152, 101);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Максимальное значение промежутка работы на ЦП";
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.lblDeviceQueue);
+            this.groupBox3.Location = new System.Drawing.Point(393, 54);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(384, 284);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Очередь к внешнему устройству";
+            // 
+            // lblDeviceQueue
+            // 
+            this.lblDeviceQueue.FormattingEnabled = true;
+            this.lblDeviceQueue.Location = new System.Drawing.Point(-2, 14);
+            this.lblDeviceQueue.Name = "lblDeviceQueue";
+            this.lblDeviceQueue.Size = new System.Drawing.Size(384, 264);
+            this.lblDeviceQueue.TabIndex = 0;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(numericUpDown4);
-            groupBox4.Location = new Point(577, 12);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(152, 101);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Размер оперативной памяти";
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox4.AutoSize = true;
+            this.groupBox4.Controls.Add(this.tbCPU);
+            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(384, 45);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Центральный процессор";
+            // 
+            // tbCPU
+            // 
+            this.tbCPU.Location = new System.Drawing.Point(6, 20);
+            this.tbCPU.Name = "tbCPU";
+            this.tbCPU.Size = new System.Drawing.Size(373, 20);
+            this.tbCPU.TabIndex = 0;
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(numericUpDown5);
-            groupBox5.Location = new Point(772, 12);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(152, 101);
-            groupBox5.TabIndex = 4;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Минимальный размер адресного пространства процессора";
+            this.groupBox5.Controls.Add(this.tbDevice);
+            this.groupBox5.Location = new System.Drawing.Point(393, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(382, 44);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Внешнее устройство";
             // 
-            // groupBox6
+            // tbDevice
             // 
-            groupBox6.Controls.Add(numericUpDown6);
-            groupBox6.Location = new Point(969, 12);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(152, 101);
-            groupBox6.TabIndex = 5;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Максимальный размер адресного пространства процессора";
+            this.tbDevice.Location = new System.Drawing.Point(5, 19);
+            this.tbDevice.Name = "tbDevice";
+            this.tbDevice.Size = new System.Drawing.Size(374, 20);
+            this.tbDevice.TabIndex = 0;
             // 
-            // groupBox7
+            // tBL4
             // 
-            groupBox7.Controls.Add(textBox1);
-            groupBox7.Location = new Point(12, 147);
-            groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(525, 384);
-            groupBox7.TabIndex = 6;
-            groupBox7.TabStop = false;
-            groupBox7.Text = "Центральный процессор";
+            this.tBL4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBL4.AutoSize = true;
+            this.tBL4.ColumnCount = 6;
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.Controls.Add(this.tBL4_3, 0, 0);
+            this.tBL4.Controls.Add(this.tBL4_4, 0, 0);
+            this.tBL4.Controls.Add(this.tBL4_1, 0, 0);
+            this.tBL4.Controls.Add(this.tBL4_2, 0, 0);
+            this.tBL4.Controls.Add(this.tBL4_5, 4, 0);
+            this.tBL4.Controls.Add(this.tBL4_6, 5, 0);
+            this.tBL4.Location = new System.Drawing.Point(3, 3);
+            this.tBL4.Name = "tBL4";
+            this.tBL4.RowCount = 1;
+            this.tBL4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4.Size = new System.Drawing.Size(780, 94);
+            this.tBL4.TabIndex = 2;
             // 
-            // groupBox8
+            // tBL4_3
             // 
-            groupBox8.Controls.Add(textBox2);
-            groupBox8.Location = new Point(577, 147);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(544, 384);
-            groupBox8.TabIndex = 7;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Внешнее устройство";
+            this.tBL4_3.ColumnCount = 1;
+            this.tBL4_3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4_3.Controls.Add(this.nudMaxValueOfBurstTime, 0, 1);
+            this.tBL4_3.Controls.Add(this.label4, 0, 0);
+            this.tBL4_3.Location = new System.Drawing.Point(263, 3);
+            this.tBL4_3.Name = "tBL4_3";
+            this.tBL4_3.RowCount = 2;
+            this.tBL4_3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tBL4_3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tBL4_3.Size = new System.Drawing.Size(123, 88);
+            this.tBL4_3.TabIndex = 12;
             // 
-            // textBox1
+            // nudMaxValueOfBurstTime
             // 
-            textBox1.BackColor = SystemColors.Menu;
-            textBox1.Location = new Point(6, 22);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(513, 208);
-            textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = SystemColors.Menu;
-            textBox2.Location = new Point(0, 22);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(538, 208);
-            textBox2.TabIndex = 1;
-            // 
-            // groupBox9
-            // 
-            groupBox9.Controls.Add(textBox3);
-            groupBox9.Location = new Point(12, 184);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(525, 365);
-            groupBox9.TabIndex = 1;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "Очередь к центральному процессору";
-            // 
-            // groupBox10
-            // 
-            groupBox10.Controls.Add(textBox4);
-            groupBox10.Location = new Point(571, 184);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new Size(550, 365);
-            groupBox10.TabIndex = 8;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "Очередь к внешнему устройству";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(6, 22);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(513, 319);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(6, 22);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(538, 319);
-            textBox4.TabIndex = 3;
-            // 
-            // groupBox11
-            // 
-            groupBox11.Controls.Add(label4);
-            groupBox11.Controls.Add(label3);
-            groupBox11.Controls.Add(label2);
-            groupBox11.Controls.Add(label1);
-            groupBox11.Location = new Point(12, 571);
-            groupBox11.Name = "groupBox11";
-            groupBox11.Size = new Size(1109, 42);
-            groupBox11.TabIndex = 9;
-            groupBox11.TabStop = false;
-            groupBox11.Text = "groupBox11";
-            // 
-            // groupBox12
-            // 
-            groupBox12.Controls.Add(radioButton2);
-            groupBox12.Controls.Add(radioButton1);
-            groupBox12.Location = new Point(106, 643);
-            groupBox12.Name = "groupBox12";
-            groupBox12.Size = new Size(431, 37);
-            groupBox12.TabIndex = 10;
-            groupBox12.TabStop = false;
-            groupBox12.Text = "Режим работы";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(156, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Размер свободной памяти:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(294, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(13, 15);
-            label2.TabIndex = 1;
-            label2.Text = "0";
-            label2.Click += label2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(559, 19);
-            label3.Name = "label3";
-            label3.Size = new Size(213, 15);
-            label3.TabIndex = 10;
-            label3.Text = "Размер памяти, занятой процессами:";
+            this.nudMaxValueOfBurstTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMaxValueOfBurstTime.Location = new System.Drawing.Point(3, 65);
+            this.nudMaxValueOfBurstTime.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMaxValueOfBurstTime.Name = "nudMaxValueOfBurstTime";
+            this.nudMaxValueOfBurstTime.Size = new System.Drawing.Size(117, 20);
+            this.nudMaxValueOfBurstTime.TabIndex = 6;
+            this.nudMaxValueOfBurstTime.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(890, 19);
-            label4.Name = "label4";
-            label4.Size = new Size(13, 15);
-            label4.TabIndex = 11;
-            label4.Text = "0";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 52);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Максимальное значение промежутка работы на ЦП";
             // 
-            // textBox5
+            // tBL4_4
             // 
-            textBox5.BackColor = SystemColors.Menu;
-            textBox5.Location = new Point(1, 631);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(1142, 63);
-            textBox5.TabIndex = 10;
+            this.tBL4_4.ColumnCount = 1;
+            this.tBL4_4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4_4.Controls.Add(this.cbRamSize, 0, 1);
+            this.tBL4_4.Controls.Add(this.label3, 0, 0);
+            this.tBL4_4.Location = new System.Drawing.Point(393, 3);
+            this.tBL4_4.Name = "tBL4_4";
+            this.tBL4_4.RowCount = 2;
+            this.tBL4_4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tBL4_4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tBL4_4.Size = new System.Drawing.Size(123, 88);
+            this.tBL4_4.TabIndex = 11;
+            // 
+            // cbRamSize
+            // 
+            this.cbRamSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbRamSize.DisplayMember = "3200";
+            this.cbRamSize.FormattingEnabled = true;
+            this.cbRamSize.Items.AddRange(new object[] {
+            "3200",
+            "6400"});
+            this.cbRamSize.Location = new System.Drawing.Point(3, 64);
+            this.cbRamSize.Name = "cbRamSize";
+            this.cbRamSize.Size = new System.Drawing.Size(117, 21);
+            this.cbRamSize.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 26);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Размер оперативной памяти";
+            // 
+            // tBL4_1
+            // 
+            this.tBL4_1.ColumnCount = 1;
+            this.tBL4_1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4_1.Controls.Add(this.nudIntesity, 0, 1);
+            this.tBL4_1.Controls.Add(this.label1, 0, 0);
+            this.tBL4_1.Location = new System.Drawing.Point(3, 3);
+            this.tBL4_1.Name = "tBL4_1";
+            this.tBL4_1.RowCount = 2;
+            this.tBL4_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tBL4_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tBL4_1.Size = new System.Drawing.Size(123, 88);
+            this.tBL4_1.TabIndex = 10;
+            // 
+            // nudIntesity
+            // 
+            this.nudIntesity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudIntesity.DecimalPlaces = 1;
+            this.nudIntesity.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudIntesity.Location = new System.Drawing.Point(3, 65);
+            this.nudIntesity.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudIntesity.Name = "nudIntesity";
+            this.nudIntesity.Size = new System.Drawing.Size(117, 20);
+            this.nudIntesity.TabIndex = 5;
+            this.nudIntesity.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 39);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Интенсивность поступления процессов";
+            // 
+            // tBL4_2
+            // 
+            this.tBL4_2.ColumnCount = 1;
+            this.tBL4_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tBL4_2.Controls.Add(this.label2, 0, 0);
+            this.tBL4_2.Controls.Add(this.nudMinValueOfBurstTime, 0, 1);
+            this.tBL4_2.Location = new System.Drawing.Point(133, 3);
+            this.tBL4_2.Name = "tBL4_2";
+            this.tBL4_2.RowCount = 2;
+            this.tBL4_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.45454F));
+            this.tBL4_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.54545F));
+            this.tBL4_2.Size = new System.Drawing.Size(123, 88);
+            this.tBL4_2.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 52);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Миниманьное значение промежутка работы на ЦП";
+            // 
+            // nudMinValueOfBurstTime
+            // 
+            this.nudMinValueOfBurstTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMinValueOfBurstTime.Location = new System.Drawing.Point(3, 65);
+            this.nudMinValueOfBurstTime.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMinValueOfBurstTime.Name = "nudMinValueOfBurstTime";
+            this.nudMinValueOfBurstTime.Size = new System.Drawing.Size(117, 20);
+            this.nudMinValueOfBurstTime.TabIndex = 5;
+            this.nudMinValueOfBurstTime.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // tBL4_5
+            // 
+            this.tBL4_5.ColumnCount = 1;
+            this.tBL4_5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tBL4_5.Controls.Add(this.nudMinValueOfAddrSpace, 0, 1);
+            this.tBL4_5.Controls.Add(this.label5, 0, 0);
+            this.tBL4_5.Location = new System.Drawing.Point(523, 3);
+            this.tBL4_5.Name = "tBL4_5";
+            this.tBL4_5.RowCount = 2;
+            this.tBL4_5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tBL4_5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tBL4_5.Size = new System.Drawing.Size(123, 88);
+            this.tBL4_5.TabIndex = 13;
+            // 
+            // nudMinValueOfAddrSpace
+            // 
+            this.nudMinValueOfAddrSpace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMinValueOfAddrSpace.Location = new System.Drawing.Point(3, 65);
+            this.nudMinValueOfAddrSpace.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMinValueOfAddrSpace.Name = "nudMinValueOfAddrSpace";
+            this.nudMinValueOfAddrSpace.Size = new System.Drawing.Size(117, 20);
+            this.nudMinValueOfAddrSpace.TabIndex = 7;
+            this.nudMinValueOfAddrSpace.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudMinValueOfAddrSpace.ValueChanged += new System.EventHandler(this.nudMinValueOfAddrSpace_ValueChanged);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(18, 653);
-            label5.Name = "label5";
-            label5.Size = new Size(13, 15);
-            label5.TabIndex = 11;
-            label5.Text = "0";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 52);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Минимальный размер адресного пространства процесса";
             // 
-            // button1
+            // tBL4_6
             // 
-            button1.Location = new Point(589, 640);
-            button1.Name = "button1";
-            button1.Size = new Size(88, 41);
-            button1.TabIndex = 12;
-            button1.Text = "Сохранение настроек";
-            button1.UseVisualStyleBackColor = true;
+            this.tBL4_6.ColumnCount = 1;
+            this.tBL4_6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tBL4_6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tBL4_6.Controls.Add(this.nudMaxValueOfAddrSpace, 0, 1);
+            this.tBL4_6.Controls.Add(this.label6, 0, 0);
+            this.tBL4_6.Location = new System.Drawing.Point(653, 3);
+            this.tBL4_6.Name = "tBL4_6";
+            this.tBL4_6.RowCount = 2;
+            this.tBL4_6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tBL4_6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tBL4_6.Size = new System.Drawing.Size(124, 88);
+            this.tBL4_6.TabIndex = 14;
             // 
-            // radioButton1
+            // nudMaxValueOfAddrSpace
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(64, 12);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(66, 19);
-            radioButton1.TabIndex = 16;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Ручной";
-            radioButton1.UseVisualStyleBackColor = true;
+            this.nudMaxValueOfAddrSpace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMaxValueOfAddrSpace.Location = new System.Drawing.Point(3, 65);
+            this.nudMaxValueOfAddrSpace.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMaxValueOfAddrSpace.Name = "nudMaxValueOfAddrSpace";
+            this.nudMaxValueOfAddrSpace.Size = new System.Drawing.Size(118, 20);
+            this.nudMaxValueOfAddrSpace.TabIndex = 8;
+            this.nudMaxValueOfAddrSpace.Value = new decimal(new int[] {
+            260,
+            0,
+            0,
+            0});
             // 
-            // radioButton2
+            // label6
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(181, 12);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 19);
-            radioButton2.TabIndex = 16;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Автоматический";
-            radioButton2.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 52);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Максимальный размер адресного пространства процесса";
             // 
-            // button2
+            // groupBox6
             // 
-            button2.Location = new Point(709, 639);
-            button2.Name = "button2";
-            button2.Size = new Size(88, 41);
-            button2.TabIndex = 13;
-            button2.Text = "Рабочий такт";
-            button2.UseVisualStyleBackColor = true;
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.AutoSize = true;
+            this.groupBox6.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox6.Location = new System.Drawing.Point(3, 450);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(780, 50);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Оперативная память";
             // 
-            // button3
+            // tableLayoutPanel1
             // 
-            button3.Location = new Point(836, 640);
-            button3.Name = "button3";
-            button3.Size = new Size(88, 41);
-            button3.TabIndex = 14;
-            button3.Text = "Завершение сеанса";
-            button3.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblOccupateMemValue, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblFreeMemSize, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 20);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 24);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button4
+            // label7
             // 
-            button4.Location = new Point(951, 643);
-            button4.Name = "button4";
-            button4.RightToLeft = RightToLeft.No;
-            button4.Size = new Size(88, 41);
-            button4.TabIndex = 15;
-            button4.Text = "Статистика";
-            button4.UseVisualStyleBackColor = true;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(184, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Размер свободной памяти:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown1
+            // label8
             // 
-            numericUpDown1.Location = new Point(0, 78);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(152, 23);
-            numericUpDown1.TabIndex = 16;
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(383, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(184, 24);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Размер занятой памяти:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown2
+            // lblOccupateMemValue
             // 
-            numericUpDown2.Location = new Point(0, 78);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(152, 23);
-            numericUpDown2.TabIndex = 17;
+            this.lblOccupateMemValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblOccupateMemValue.AutoSize = true;
+            this.lblOccupateMemValue.Location = new System.Drawing.Point(573, 0);
+            this.lblOccupateMemValue.Name = "lblOccupateMemValue";
+            this.lblOccupateMemValue.Size = new System.Drawing.Size(185, 24);
+            this.lblOccupateMemValue.TabIndex = 3;
+            this.lblOccupateMemValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown3
+            // lblFreeMemSize
             // 
-            numericUpDown3.Location = new Point(0, 78);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(152, 23);
-            numericUpDown3.TabIndex = 17;
+            this.lblFreeMemSize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFreeMemSize.AutoSize = true;
+            this.lblFreeMemSize.Location = new System.Drawing.Point(193, 0);
+            this.lblFreeMemSize.Name = "lblFreeMemSize";
+            this.lblFreeMemSize.Size = new System.Drawing.Size(184, 24);
+            this.lblFreeMemSize.TabIndex = 4;
+            this.lblFreeMemSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown4
+            // timerAutoMode
             // 
-            numericUpDown4.Location = new Point(0, 78);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(152, 23);
-            numericUpDown4.TabIndex = 17;
-            // 
-            // numericUpDown5
-            // 
-            numericUpDown5.Location = new Point(0, 78);
-            numericUpDown5.Name = "numericUpDown5";
-            numericUpDown5.Size = new Size(152, 23);
-            numericUpDown5.TabIndex = 17;
-            // 
-            // numericUpDown6
-            // 
-            numericUpDown6.Location = new Point(0, 78);
-            numericUpDown6.Name = "numericUpDown6";
-            numericUpDown6.Size = new Size(152, 23);
-            numericUpDown6.TabIndex = 17;
+            this.timerAutoMode.Interval = 1000;
+            this.timerAutoMode.Tick += new System.EventHandler(this.timerAutoMode_Tick);
             // 
             // FrmDetailed
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1142, 692);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label5);
-            Controls.Add(groupBox12);
-            Controls.Add(textBox5);
-            Controls.Add(groupBox11);
-            Controls.Add(groupBox10);
-            Controls.Add(groupBox9);
-            Controls.Add(groupBox8);
-            Controls.Add(groupBox7);
-            Controls.Add(groupBox6);
-            Controls.Add(groupBox5);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Name = "FrmDetailed";
-            Text = "Form1";
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            groupBox5.ResumeLayout(false);
-            groupBox6.ResumeLayout(false);
-            groupBox7.ResumeLayout(false);
-            groupBox7.PerformLayout();
-            groupBox8.ResumeLayout(false);
-            groupBox8.PerformLayout();
-            groupBox9.ResumeLayout(false);
-            groupBox9.PerformLayout();
-            groupBox10.ResumeLayout(false);
-            groupBox10.PerformLayout();
-            groupBox11.ResumeLayout(false);
-            groupBox11.PerformLayout();
-            groupBox12.ResumeLayout(false);
-            groupBox12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(788, 561);
+            this.Controls.Add(this.tBL1);
+            this.Name = "FrmDetailed";
+            this.Text = "Lab_3";
+            this.tBL1.ResumeLayout(false);
+            this.tBL1.PerformLayout();
+            this.tBL2_1.ResumeLayout(false);
+            this.tBL2_1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tBL3.ResumeLayout(false);
+            this.tBL3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.tBL4.ResumeLayout(false);
+            this.tBL4_3.ResumeLayout(false);
+            this.tBL4_3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxValueOfBurstTime)).EndInit();
+            this.tBL4_4.ResumeLayout(false);
+            this.tBL4_4.PerformLayout();
+            this.tBL4_1.ResumeLayout(false);
+            this.tBL4_1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntesity)).EndInit();
+            this.tBL4_2.ResumeLayout(false);
+            this.tBL4_2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinValueOfBurstTime)).EndInit();
+            this.tBL4_5.ResumeLayout(false);
+            this.tBL4_5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinValueOfAddrSpace)).EndInit();
+            this.tBL4_6.ResumeLayout(false);
+            this.tBL4_6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxValueOfAddrSpace)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
-        private GroupBox groupBox4;
-        private GroupBox groupBox5;
-        private GroupBox groupBox6;
-        private GroupBox groupBox7;
-        private TextBox textBox1;
-        private GroupBox groupBox8;
-        private TextBox textBox2;
-        private GroupBox groupBox9;
-        private TextBox textBox3;
-        private GroupBox groupBox10;
-        private TextBox textBox4;
-        private GroupBox groupBox11;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private GroupBox groupBox12;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private TextBox textBox5;
-        private Label label5;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown4;
-        private NumericUpDown numericUpDown5;
-        private NumericUpDown numericUpDown6;
+        private System.Windows.Forms.TableLayoutPanel tBL1;
+        private System.Windows.Forms.TableLayoutPanel tBL3;
+        private System.Windows.Forms.TableLayoutPanel tBL4;
+        private System.Windows.Forms.TableLayoutPanel tBL2_1;
+        private System.Windows.Forms.Button bClear;
+        private System.Windows.Forms.Button bWorkingCycle;
+        private System.Windows.Forms.Button bSaveSettings;
+        private System.Windows.Forms.NumericUpDown nudMaxValueOfAddrSpace;
+        private System.Windows.Forms.NumericUpDown nudMinValueOfAddrSpace;
+        private System.Windows.Forms.NumericUpDown nudMinValueOfBurstTime;
+        private System.Windows.Forms.ComboBox cbRamSize;
+        private System.Windows.Forms.TableLayoutPanel tBL4_2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tBL4_4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TableLayoutPanel tBL4_3;
+        private System.Windows.Forms.NumericUpDown nudMaxValueOfBurstTime;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TableLayoutPanel tBL4_5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TableLayoutPanel tBL4_6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timerAutoMode;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbAuto;
+        private System.Windows.Forms.RadioButton rbManual;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tbCPU;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox tbDevice;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tBL4_1;
+        private System.Windows.Forms.NumericUpDown nudIntesity;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblOccupateMemValue;
+        private System.Windows.Forms.Label lblFreeMemSize;
+        private System.Windows.Forms.ListBox lblCPUQueue;
+        private System.Windows.Forms.ListBox lblDeviceQueue;
     }
 }
+

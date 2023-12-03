@@ -8,18 +8,18 @@ namespace lab_work_uni_csharp
 {
     public class DeviceScheduler
     {
-        private Resource resource;
-        private Queue<Process> queue;
+        private Resource _resource;
+        private Queue<Process> _queue;
 
         public DeviceScheduler(Resource resource, Queue<Process> queue)
         {
-            this.resource = resource;
-            this.queue = queue;
+            this._resource = resource;
+            this._queue = queue;
         }
         public Queue<Process> Session()
         {
-            resource.ActiveProcess = queue.Dequeue();
-            return queue;
+            _resource.ActiveProcess = _queue.Dequeue();
+            return _queue;
         }
     }
 }

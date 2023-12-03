@@ -6,36 +6,27 @@ using System.Threading.Tasks;
 
 namespace lab_work_uni_csharp
 {
-    public class MemoryManager
+    class MemoryManager
     {
-        private Memory _memory = null!;
-
+        
         public void Save(Memory ramMemory)
         {
             this._memory = ramMemory;
         }
 
-        public  Memory Allocate(Process process)
+        public Memory Allocate(long size)
         {
-            if (_memory.FreeSize >= process.AddrSpace)
-            {
-               
-                
-                _memory.OccupiedSize += process.AddrSpace; 
-                return _memory;
-            }
-            else
-            {
-                return null!; 
-            }
+            if (size > _memory.FreeSize) return null!;
+            _memory.OccupiedSize += size;
+            return _memory;
         }
-        public void Free(Memory? ramMemory, Process? process)
-        {
-            if (ramMemory == null || process == null) return;
-            ramMemory.Clear();
-            this._memory.OccupiedSize -= process.AddrSpace;
-        }
-    }
 
-   
+        public Memory Free(long size)
+        {
+            _memory.OccupiedSize -= size;
+            return _memory;
+        }
+
+        private Memory _memory;
+    }
 }

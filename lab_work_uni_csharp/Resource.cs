@@ -1,38 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics.Contracts;
+using System.Runtime.CompilerServices;
 
 namespace lab_work_uni_csharp
 {
-    public class Resource
+    public class Resource: INotifyPropertyChanged
     {
+        
+        
         public void WorkingCycle()
         {
             if (!IsFree())
             {
-                activeProcess?.IncreaseWorkTime();
+                _activeProcess?.IncreaseWorkTime();
             }
         }
         [Pure]
         public bool IsFree()
         {
-            return activeProcess == null;
+            return _activeProcess == null;
         }
         public void Clear()
         {
-            activeProcess = null;
+            _activeProcess = null;
         }
 
-        public Process ActiveProcess
-        {
-            get;
-            set;
+        public Process ActiveProcess { get => _activeProcess;
+            set { 
+                _activeProcess = value;
+                OnPropertyChanged();
+            } 
         }
 
-        private Process? activeProcess = null;
+        private Process? _activeProcess = null;
         
+        
+        public event PropertyChangedEventHandler? PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 }

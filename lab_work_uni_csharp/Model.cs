@@ -1,112 +1,202 @@
-﻿using lab_work_uni;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
 
 namespace lab_work_uni_csharp
 {
-    public class Model
+    class Model: INotifyPropertyChanged
     {
-        private SystemClock _clock;
-        private Resource _cpu;
-        private Resource _device;
-        private Memory _ram;
-        private IdGenerator? _id;
-        private PriorityQueue<Process, long> _readyQueue;
+
+        public Model()
+        {
+            Clock = new SystemClock();
+            Cpu = new Resource();
+            Ram = new Memory();
+            Device = new Resource();
+            _id = new IdGenerator();
+            _readyQueue = new Queue<Process>(new SortedSet<Process>());
+
+            _deviceQueue = new Queue<Process>();
+            _cpuScheduler = new CpuScheduler(Cpu, _readyQueue);
+            _memoryManager = new MemoryManager();
+            _deviceScheduler = new DeviceScheduler(Device, _deviceQueue);
+            ModelSettings = new Settings();
+            _processRand = new Random();
+        }
+
+        public void SaveSettings()
+        {
+            Ram.Save(ModelSettings.ValueOfRamSize);
+            _memoryManager.Save(Ram);
+        }
+
+        public void WorkingCycle() 
+        {
+            Clock.Working();
+            double c = _processRand.NextDouble();
+            
+            if (c <= ModelSettings.Intensity)
+            {
+                Process proc = new Process(_id.Id, _processRand.Next(ModelSettings.MinValueOfAddrSpace, ModelSettings.MaxValueOfAddrSpace + 1));
+
+                if (_memoryManager.Allocate(proc.AddrSpace) != null)
+                {
+                    proc.ArrivalTime = Clock.Clock;
+                    proc.BurstTime = _processRand.Next(ModelSettings.MinValueOfBurstTime, ModelSettings.MaxValueOfBurstTime + 1);
+                    _readyQueue.Enqueue(proc);
+
+                    proc.ReadyQueueArrivalTime = Clock.Clock;
+                    if (Cpu.IsFree())
+                    {
+                        putProcessOnResource(Cpu);
+                    }                  
+                }
+            }
+            Cpu.WorkingCycle();
+            Device.WorkingCycle();
+        }
+
+        public void Clear() 
+        {
+            Unsubscribe(Cpu);
+            Unsubscribe(Device);
+            Cpu.Clear();
+            Device.Clear();
+            Ram.Clear();
+            _readyQueue.Clear();
+           _deviceQueue.Clear();
+            Clock.Clear();
+            _id.Clear();
+        }
+
+
+        public readonly SystemClock Clock;       
+        public readonly Resource Cpu;
+        public readonly Resource Device;
+        public readonly Memory Ram;
+        private IdGenerator _id;
+        private Queue<Process> _readyQueue;
         private Queue<Process> _deviceQueue;
-        private CPUScheduler? _cpuScheduler;
+        private CpuScheduler _cpuScheduler;
         private MemoryManager _memoryManager;
         private DeviceScheduler _deviceScheduler;
         private Random _processRand;
-        private Settings _settings;
-
-
-        public Model() 
-        { 
-            _clock = new SystemClock();
-            _cpu = new Resource();
-            _device = new Resource();
-            _ram = new Memory();
-            _memoryManager = new MemoryManager();
-            _processRand = new Random();
-            _settings = new Settings();
-            if (_readyQueue != null)
+        public readonly Settings ModelSettings;
+        public Queue<Process> ReadyQueue
+        {
+            get
             {
-                _cpuScheduler = new CPUScheduler(_cpu, _readyQueue);
-                _id = new IdGenerator();
+                return _readyQueue;
             }
-
-            _readyQueue = new PriorityQueue<Process, long>();
-            _deviceQueue = new Queue<Process>();
-            _deviceScheduler = new DeviceScheduler(_device, _deviceQueue);
-
-        }
-
-
-       public void SaveSettings()
-        {
-            _ram.Save(_settings.ValueOfRamSize);
-
-
-            _memoryManager = new MemoryManager();
-            
-        }
-
-       public void WorkingCycle()
-        {
-            
-            _clock.Working();
-            
-            if (_processRand.NextDouble() <= _settings.Intensity)
+            set
             {
-                if (_id != null)
-                {
-                    Process proc = new Process(_id.Id, 
-                        _processRand.Next(_settings.MinValueOfAddrSpace, _settings.MaxValueOfAddrSpace + 1));
-                    if (_memoryManager.Allocate(proc) != null)
+                _readyQueue = value;
+                OnPropertyChanged();
+            }
+        }
+          
+        public Queue<Process> DeviceQueue
+        {
+            get
+            {
+                return _deviceQueue;
+            }
+            set
+            {
+                _deviceQueue = value;
+                OnPropertyChanged();
+            }
+        }
+        
+        private void Subscribe(Resource resource)
+        {
+            resource.ActiveProcess.FreeingAResource += FreeingAResourceEventHandler;
+        }
+
+        private void Unsubscribe(Resource resource)
+        {
+            resource.ActiveProcess.FreeingAResource -= FreeingAResourceEventHandler;
+        }
+        private void putProcessOnResource(Resource resource)
+        {
+            if(resource == Cpu)
+            {
+                ReadyQueue = _cpuScheduler.Session();
+                resource.ActiveProcess.CommonWaitingTime += (Clock.Clock - resource.ActiveProcess.ReadyQueueArrivalTime);
+            }
+            else
+            {
+                DeviceQueue = _deviceScheduler.Session();
+            }
+            Subscribe(resource);
+        }
+        private void FreeingAResourceEventHandler(object sender, EventArgs e)
+        {
+            Process resourceFreeingProcess = sender as Process ?? throw new InvalidOperationException();
+
+
+            Debug.Assert(resourceFreeingProcess != null, nameof(resourceFreeingProcess) + " != null");
+            switch (resourceFreeingProcess.Status)
+            {
+                case ProcessStatus.Terminated:
+                    Unsubscribe(Cpu);
+                    Cpu.Clear(); 
+                    _memoryManager.Free(resourceFreeingProcess.AddrSpace);
+                    if (_readyQueue.Count != 0)
                     {
-                        proc.BurstTime = _processRand.Next(_settings.MinValueOfBurstTime, _settings.MaxValueOfBurstTime + 1);
-                  
-                        _readyQueue.Enqueue(proc, 1);
-                        if (_cpu.IsFree())
-                        {
-                            _cpuScheduler?.Session();
-                        }
+                        putProcessOnResource(Cpu);
+                    }                                              
+                    break;
+                case ProcessStatus.Waiting:
+                    Unsubscribe(Cpu);
+                    Cpu.Clear();
+                    if (_readyQueue.Count != 0)
+                    {
+                        putProcessOnResource(Cpu);
+                    }                   
+                    
+                    resourceFreeingProcess.ResetWorkTime();
+
+                    resourceFreeingProcess.BurstTime = _processRand.Next(ModelSettings.MinValueOfBurstTime, ModelSettings.MaxValueOfBurstTime + 1);
+                    DeviceQueue.Enqueue(resourceFreeingProcess);
+                    if (Device.IsFree())
+                    {
+                        putProcessOnResource(Device);
                     }
-                }
-            };
-            _cpu.WorkingCycle();
-            _device.WorkingCycle();
+                    break;
+
+                case ProcessStatus.Ready:
+                    Unsubscribe(Device);
+                    Device.Clear();
+                    if (_deviceQueue.Count != 0)
+                    {
+                        putProcessOnResource(Device);
+                    }
+                    resourceFreeingProcess.ResetWorkTime();
+                    resourceFreeingProcess.BurstTime = _processRand.Next(ModelSettings.MinValueOfBurstTime, ModelSettings.MaxValueOfBurstTime + 1);
+                    _readyQueue.Enqueue(resourceFreeingProcess);
+                    resourceFreeingProcess.ReadyQueueArrivalTime = Clock.Clock;
+                    if (Cpu.IsFree())
+                    {
+                        putProcessOnResource(Cpu);
+                    }
+                    break;
+                default:
+                    throw new Exception("Unknown process status");
             }
-
-            
-       
-        public void Clear()
-        {
-            _cpu.Clear();
-
-            _device.Clear();
-
-            _ram.Clear();
-
-            _readyQueue.Clear();
-
-            _deviceQueue.Clear();
-
-            _clock.Clear();
         }
 
-        private void FreeingAResourceEventHandler(Process proc)
+        public event PropertyChangedEventHandler? PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            Console.WriteLine($"Resource freed for process {proc}");
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        private void Subscribe(Process process)
-        {
-            process.FreeingAResource += FreeingAResourceEventHandler;
-        }
-
-        private void Unsubscribe(Process process)
-        {
-            process.FreeingAResource -= FreeingAResourceEventHandler;
-        }
-       
     }
 }

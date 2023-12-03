@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = lab_work_uni_csharp
-build_property.ProjectDir = D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\
+build_property.ProjectDir = D:\c#\lab-work-uni\lab_work_uni_csharp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
