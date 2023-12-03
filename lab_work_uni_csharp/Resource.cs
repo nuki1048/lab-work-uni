@@ -13,7 +13,7 @@ namespace lab_work_uni_csharp
         {
             if (!IsFree())
             {
-                activeProcess.IncreaseWorkTime();
+                activeProcess?.IncreaseWorkTime();
             }
         }
         [Pure]
@@ -32,7 +32,7 @@ namespace lab_work_uni_csharp
             set;
         }
 
-        private Process activeProcess;
+        private Process? activeProcess = null;
         
     }
 }

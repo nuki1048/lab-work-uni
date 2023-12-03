@@ -8,12 +8,12 @@ namespace lab_work_uni_csharp
 {
     class Settings
     {
-        private double intensity;
-        private int minvalueOfBurstTime;
-        private int maxvalueOfBurstTime;
-        private int minvalueOfAddrSpace;
-        private int maxvalueOfAddrSpace;
-        private int valueofRAMSize;
+        private double _intensity;
+        private int _minvalueOfBurstTime;
+        private int _maxvalueOfBurstTime;
+        private int _minvalueOfAddrSpace;
+        private int _maxvalueOfAddrSpace;
+        private int _valueofRamSize;
 
 
 
@@ -23,7 +23,7 @@ namespace lab_work_uni_csharp
         public int MaxValueOfBurstTime { get; set; }
         public int MinValueOfAddrSpace { get; set; }
         public int MaxValueOfAddrSpace { get; set; }
-        public int ValueOfRAMSize { get; set; }
+        public int ValueOfRamSize { get; set; }
 
         //TODO: a temporary stub until you repeat the request to Form
         public Settings()
@@ -33,7 +33,7 @@ namespace lab_work_uni_csharp
             MaxValueOfBurstTime = 6;
             MinValueOfAddrSpace = 100;
             MaxValueOfAddrSpace = 300;
-            ValueOfRAMSize = 4096;
+            ValueOfRamSize = 4096;
         }
 
 

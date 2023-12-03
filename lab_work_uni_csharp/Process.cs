@@ -8,64 +8,79 @@ namespace lab_work_uni_csharp
 {
     public enum ProcessStatus { Ready, Running, Waiting, Terminated }
 
+    public delegate void ProcessDelegate(Process proc);
+
     public class Process
     {
         public Process(long pId, long addrSpace)
         {
-            id = pId;
-            name = "P" + pId.ToString();
+            _id = pId;
+            _name = "P" + pId.ToString();
             Status = ProcessStatus.Ready;
             this.AddrSpace = addrSpace;
         }
         public void IncreaseWorkTime()
         {
-            if (workTime == BurstTime) 
+            if (_workTime == BurstTime) 
             {
                 if (Status == ProcessStatus.Running)
                 {
-                    Status = procRand.Next(0, 2) == 0 ? ProcessStatus.Terminated : ProcessStatus.Waiting; 
+                    Status = _procRand.Next(0, 2) == 0 ? ProcessStatus.Terminated : ProcessStatus.Waiting; 
                 }
-                else
+                else 
                 {
-                    Status = ProcessStatus.Ready; 
+                    Status = ProcessStatus.Ready;
+                    OnFreeingAResource();
                 }
             }
             else
             {
-                workTime++;
+                _workTime++;
             }
         }
+
+
+
         public void ResetWorkTime()
         {
-            workTime = 0;
+            _workTime = 0;
         }
         public override string ToString()
         {
-            return "Process Id = " + id.ToString() + "; BurstTime = " + BurstTime.ToString() + "; WorkTime = " + workTime.ToString();
+            return "Process Id = " + _id.ToString() + "; BurstTime = " + BurstTime.ToString() + "; WorkTime = " + _workTime.ToString();
         }
 
-        private long id;
-        private string name;
+        private long _id;
+        private string _name;
+        private long _workTime;
+        private long _addrSpace;
 
-        private long workTime;
-        private long addrSpace;
-        
-        private Random procRand = new Random();
+        private Random _procRand = new Random();
 
         public long BurstTime
         {
-            get;
+            get; 
             set; 
         }
         public long AddrSpace
         {
-            get; 
-            private set; 
+            get;
+            set; 
         }
         public ProcessStatus Status
         {
             get; 
             set; 
         }
+
+        public event ProcessDelegate FreeingAResource;
+
+       
+
+        private void OnFreeingAResource()
+        {
+            FreeingAResource?.Invoke(this);
+        }
+
     }
 }

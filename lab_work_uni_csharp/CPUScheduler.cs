@@ -10,18 +10,18 @@ namespace lab_work_uni
      
 
         private Resource _resource;
-        private PriorityQueue<Process, long> queue;
+        private PriorityQueue<Process, long> _queue;
         
         public CPUScheduler(Resource resource, PriorityQueue<Process, long> queue)
         {
             this._resource = resource;
-            this.queue = queue;
+            this._queue = queue;
         }
         public PriorityQueue<Process, long> Session()
         {
-            _resource.ActiveProcess = queue.Dequeue();
+            _resource.ActiveProcess = _queue.Dequeue();
             _resource.ActiveProcess.Status = ProcessStatus.Running;
-            return queue;
+            return _queue;
         }
     }
 

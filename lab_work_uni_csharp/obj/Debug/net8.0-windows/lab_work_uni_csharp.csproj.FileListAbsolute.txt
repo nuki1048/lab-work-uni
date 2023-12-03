@@ -1,0 +1,15 @@
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\bin\Debug\net8.0-windows\lab_work_uni_csharp.exe
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\bin\Debug\net8.0-windows\lab_work_uni_csharp.deps.json
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\bin\Debug\net8.0-windows\lab_work_uni_csharp.runtimeconfig.json
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\bin\Debug\net8.0-windows\lab_work_uni_csharp.dll
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\bin\Debug\net8.0-windows\lab_work_uni_csharp.pdb
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.AssemblyInfoInputs.cache
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.AssemblyInfo.cs
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.csproj.CoreCompileInputs.cache
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.sourcelink.json
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.dll
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\refint\lab_work_uni_csharp.dll
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.pdb
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\lab_work_uni_csharp.genruntimeconfig.cache
+D:\c#\lab_work_uni_csharp\lab_work_uni_csharp\obj\Debug\net8.0-windows\ref\lab_work_uni_csharp.dll

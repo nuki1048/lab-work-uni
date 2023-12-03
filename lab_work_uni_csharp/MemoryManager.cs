@@ -8,7 +8,7 @@ namespace lab_work_uni_csharp
 {
     public class MemoryManager
     {
-        private Memory _memory;
+        private Memory _memory = null!;
 
         public void Save(Memory ramMemory)
         {
@@ -26,7 +26,7 @@ namespace lab_work_uni_csharp
             }
             else
             {
-                return null; 
+                return null!; 
             }
         }
         public void Free(Memory? ramMemory, Process? process)

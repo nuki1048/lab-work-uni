@@ -6,10 +6,7 @@ class IdGenerator
 
     public IdGenerator Clear()
     {
-        if (this != null)
-        {
-            _id = 0;
-        }
+        _id = 0;
         return this;
     }
 

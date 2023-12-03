@@ -5,7 +5,7 @@
 
         public SystemClock(long clock)
         {
-            this.clock = clock;
+            this._clock = clock;
         }
 
     
@@ -15,15 +15,20 @@
             set;
         }
 
-        private long clock;
+        private long _clock;
 
-
-        void WorkingCycle()
+        public SystemClock()
         {
-            clock++;
+            throw new NotImplementedException();
         }
 
-        void Clear()
+
+        public void Working()
+        {
+            _clock++;
+        }
+
+        public void Clear()
         {
             Clock = 0;
         }

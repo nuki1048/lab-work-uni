@@ -26,8 +26,8 @@ namespace lab_work_uni_csharp
         }
         
 
-        private long occupiedSize;
-        private long freeSize;
+        private long _occupiedSize;
+        private long _freeSize;
 
 
         public void Save(long size)
@@ -39,7 +39,7 @@ namespace lab_work_uni_csharp
         
         public void Clear()
         {
-            this.occupiedSize = 0;
+            this._occupiedSize = 0;
         }
 
     }

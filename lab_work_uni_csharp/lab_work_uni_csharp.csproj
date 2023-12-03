@@ -8,4 +8,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="Form1.resx">
+        <DependentUpon>Form1.cs</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
 </Project>
